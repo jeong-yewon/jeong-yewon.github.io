@@ -1,0 +1,349 @@
+@charset "UTF-8";
+
+
+/*기본색상*/
+:root {
+    --main-color: #5D9AB2;
+    --accent-color: #BF6A7A;
+    --dark-main-color: #2B5566;
+    --text-bright-color: #fff;
+    --icon-color: #fff;
+    --icon-bk-color: #ddd;
+    --gray-color: #ddd;
+    --large-width: 1000px;
+    --middle-width: 768px;
+}
+
+/*기본폰트 크기 설정*/
+@media (max-width: 599px) {
+    :root {
+        font-size: 14px
+    }
+}
+
+@media(min-width: 600px) and(max-width: 799px) {
+    :root {
+        font-size: 16px
+    }
+}
+
+@media (min-width: 800px) {
+    :root {
+        font-size: 18px
+    }
+}
+
+/*header*/
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1000;
+}
+
+
+/*logo*/
+.headA {
+    display: inline-block;
+    line-height: 70px;
+    padding: 0 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.head1 {
+    background-color: #2B5566;
+    color: white;
+    height: 45px;
+    text-align: right;
+}
+
+.head1 a {
+    color: white
+}
+
+.head1 a:visited .head1 a:hover .head1 a:link {
+    text-decoration: none;
+    color: yellow;
+}
+
+.head1 h1 {
+    font-size: 5em;
+    margin-top: 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*navigation*/
+.headB ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.headB a {
+    display: block;
+    padding: 15px;
+    color: inherit;
+    font-size: 15px;
+    text-decoration: none;
+
+
+}
+
+.headB a:hover {
+    background-color: #2B5566;
+    color: whitesmoke;
+}
+
+/*큰 화면 설정*/
+@media (min-width:768px) {
+    header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .headB ul {
+        display: flex;
+    }
+
+    .headB a {
+        font-size: 14px;
+    }
+
+    .headC {
+        display: none;
+        /*        margin-right: 100%;        */
+    }
+
+    .headB {
+        display: block !important;
+    }
+}
+
+/*작은 화면 설정*/
+@media (max-width: 767px) {
+    header .container-small {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between
+    }
+
+    .headB {
+        display: none
+    }
+
+    .headC {
+        outline: none;
+        border: none;
+        background: none;
+        padding: 0;
+        margin-right: 10px;
+        font-size: 28px;
+        cursor: pointer;
+        opacity: 0.5;
+    }
+
+    .headC:hover {
+        opacity: 0.3
+    }
+}
+
+.slideshow {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+
+}
+
+/*section-conA: hero image*/
+section {
+    width: 70;
+    padding: 25px;
+}
+
+.section_title {
+    text-align: center;
+    padding: 70px 0 20px 0;
+    font-size: 4em;
+}
+
+.section_col {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px 0 0;
+}
+article {
+    width:50%;
+}
+.section_col article div {
+    margin:80px 15px;
+    border: 1px solid gray;
+}.scetion_col article div:hover{
+    box-shadow: 3px 3px 10px gray;
+}
+
+.article article01{
+        
+}
+.article_wrap{
+/*    border: 1px solid gray;*/
+    
+}
+
+
+/*footer: 주소, sns, submenu */
+footer {
+    background-color: #5D9AB2;
+    color: #fff;
+}
+
+footer .container {
+    padding: 40px 20px;
+}
+
+
+
+.footA {
+    margin-bottom: 30px;
+    display: inline-block;
+
+}
+
+.footA h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+}
+
+.footA p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px
+}
+
+.footA a {
+    color: inherit;
+    text-decoration: none
+}
+
+.footB div {
+    margin-bottom: 20px
+}
+
+.footB h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid currentColor;
+    font-size: 14px
+}
+
+.footB ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.footB a {
+    display: block;
+    padding: 5px;
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footB a:hover {
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+@media(max-width: 768px) {
+    footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .footA {
+        flex: 0 0 60%;
+    }
+
+    .footB {
+        flex: 0 0 60%;
+    }
+
+    .footC {
+        flex: -20px;
+        display: inline-block;
+        text-align: center;
+    }
+
+}
+
+@media(min-width: 768px) {
+    .footB {
+        display: flex;
+    }
+
+    .footB div {
+        flex: 1
+    }
+
+    .footB div:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+.footC {
+    bottom: 20px;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    bottom: 20px;
+    display: inline-block;
+    margin-bottom: 50%;
+    padding: 0;
+    color: #2B5566;
+
+}
+
+.footD {
+    margin-top: 20px;
+}
+
+.footD ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footD a {
+    display: block;
+    margin-right: 8px;
+    padding: 0;
+    color: inherit;
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid currentColor;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    border-radius: 50%
+}
+
+.footD a:hover {
+    background-color: rgba(0, 0, 0, 0.3)
+}
