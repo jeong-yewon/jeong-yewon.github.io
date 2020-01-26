@@ -174,7 +174,8 @@ a div p:hover {
 }
 
 .head2 img {
-    width: 1500px;
+    width:100%;
+    max-width: 1500px;
     max-height: 300px;
     object-fit: cover;
     object-position: center;
