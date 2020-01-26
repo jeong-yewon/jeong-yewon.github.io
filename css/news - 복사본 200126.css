@@ -181,12 +181,12 @@ a div p:hover {
     /*    margin:auto;*/
 }
 
-section {
+.section {
     display: flex;
     flex-wrap: wrap;
 }
 
-section {
+.section {
     max-width: 1500px;
     width: 100%;
     margin: auto;
@@ -195,72 +195,75 @@ section {
 
 }
 
-section .news_container {
+.section .container {
     width: 70%;
     display: inline-block;
 }
 
-section .news_container h1 {
+.section .container h1 {
     font-size: 3em;
     margin-bottom: 20px;
     margin-left: 20px;
 }
 
-.news_container hr {
+.container hr {
     width: 95%;
     color: #ddd;
     text-align: center;
     margin: auto;
 }
 
-.article_container {
+.article {
     display: flex;
     flex-wrap: wrap;
     margin: 20px 10px;
     padding: 15px;
 }
 
-.article_container:hover {
+.article:hover {
     box-shadow: 3px 3px 10px #aaa;
 }
 
-a .article_container{
-    text-decoration:none;
-    color:black;
-}
-a:hover, a:visited{
+.art_text a {
     text-decoration: none;
+    color: black;
 }
-a .article_text h3:hover{
+
+.art_text h3:hover {
     color: dimgray;
-    font-weight: 800;    
+    font-weight: 800;
 }
-.article_text {
+
+.art_text a:visited {
+    color: black;
+}
+
+.article div {
     width: 70%;
     display: inline-block;
 }
 
-.article_text p {
+.article p {
     margin: 15px;
 }
 
-.article_text p.author {
+.article p.author {
     font-variant: small-caps;
     font-size: 0.8em;
 }
 
-.article_picture {
-    display:inline-block;
-    text-align: center;
-    width:30%;
-}
-.article_picture img {
-    width: 100%;
+.article img {
+    width: 30%;
     padding: 10px;
     object-fit: cover;
 }
 
 
+
+.section .aside {
+    width: 30%;
+    display: inline-block;
+}
 
 .page {
     text-align: center;
@@ -307,55 +310,34 @@ a .article_text h3:hover{
     border-radius: 7px;
 }
 
-
-aside {
-    width: 30%;
-    display: inline-block;
+.aside {
     padding: 0 10px 0 15px;
     border-left: 1px solid #aaa;
 }
 
-
-aside h2 {
+.aside h2 {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
 
 }
 
-aside a {
+.aside a {
     text-decoration: none;
     color: black;
-    display:inline-block;
-    width:100%;
-    display:flex;
-    flex-wrap: wrap;
-
 }
 
-aside .event_container,
-aside .job_container {
-    display:flex;
-    flex-wrap: wrap;
-    width:100%;
-/*    padding:15px;*/
-}
-aside a:hover, aside a:visited {
+.aside a:visited {
     color: black;
-    text-decoration: none;
 }
 
-aside .schedule,
-aside .job {
-    display: inline-block;
-/*
-    display:flex;
+.schedule,
+.job {
+    display: flex;
     flex-wrap: wrap;
-*/
-    margin: 15px;
+    margin: 20px;
     /*    padding:10px;*/
-    border: 1px solid red;
-/*    border: 1px solid #ddd;*/
+    border: 1px solid #ddd;
     border-radius: 8px;
 }
 
@@ -363,17 +345,11 @@ aside .job {
     padding: 20px;
 }
 
-aside a:hover{
-        box-shadow: 3px 3px 8px #aaa;
-
-}
-
-/*
 .schedule:hover,
 .job:hover {
     box-shadow: 3px 3px 8px #aaa;
 }
-*/
+
 .schedule .evdate {
     width: 22%;
     display: inline-block;
@@ -536,18 +512,10 @@ hr.seperator {
 
 
 
-@media screen and (min-width:700px) and (max-width:1000px) {
-    section h1 {
+@media screen and (min-width:800px) and (max-width:1000px) {
+    .container h1 {
         text-align: center;
-        color:aqua;
     }
-    section .news_container {width:100%}
-    section aside {width:100%}
-    aside event_container {width:100%}
-    
-    aside .schedule {width:45%;}
-    aside .job_container a{width:50%}
-    aside .job {100%}
 
     .container .article div {
         width: 100%
@@ -596,26 +564,11 @@ hr.seperator {
     }
 }
 
-@media screen and (max-width:699px) {
-    section h1 {
+@media screen and (max-width:799px) {
+    .container h1 {
         text-align: center;
-        color:magenta;
     }
 
-    section .news_container {width:100%}
-    section aside {width:100%}
-    aside event_container {width:100%}
-    
-    .article_text {width:100%}
-    .article_picture {width:100%}
-    
-    aside .schedule, 
-    aside .job_container a,
-    aside .job {
-        width:100%;
-    }
-
-/*****************************************/
     .section, .section .container {
         width: 100%;
     }
