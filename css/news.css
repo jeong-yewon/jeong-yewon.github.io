@@ -355,8 +355,7 @@ aside .job {
 */
     margin: 15px;
     /*    padding:10px;*/
-    border: 1px solid red;
-/*    border: 1px solid #ddd;*/
+    border: 1px solid #ddd;
     border-radius: 8px;
 }
 
@@ -472,7 +471,7 @@ figcaption {
 }
 
 .container .img_container {
-    width: 90%;
+    width: 100%;
     object-fit: scale-down;
     object-position: center;
     margin-bottom: 30px;
@@ -530,26 +529,31 @@ hr.seperator {
     padding: 0;
 }
 
+/*
 .container .aside {
     width: 30%;
     display: inline-block;
 }
+*/
 
 
 
 @media screen and (min-width:700px) and (max-width:1000px) {
     section h1 {
         text-align: center;
-        color:aqua;
     }
     section .news_container {width:100%}
-    section aside {width:100%}
+    aside {width:100%; border: none;}
     aside event_container {width:100%}
     
     aside .schedule {width:45%;}
     aside .job_container a{width:50%}
     aside .job {100%}
+    
+    section.social { padding:0 ; text-align: right;}
+    section.news_article{padding-top:0; margin-top: 0;}
 
+    #news_container{padding-top:0}
     .container .article div {
         width: 100%
     }
@@ -600,11 +604,10 @@ hr.seperator {
 @media screen and (max-width:699px) {
     section h1 {
         text-align: center;
-        color:magenta;
     }
 
     section .news_container {width:100%}
-    section aside {width:100%}
+    aside {width:100%; border: none;}
     aside event_container {width:100%}
     
     .article_text {width:100%}
@@ -621,10 +624,16 @@ hr.seperator {
         width: 100%;
     }
 
+    section.social { padding:0 ; text-align: right}
+    section.news_article{padding-top:0; margin-top: 0;}
+    #news_container{padding-top:0}
+
+/*
     .section .aside {
         width: 100%;
         border-left: 0;
     }
+*/
 
     .article div {
         width: 100%
@@ -635,9 +644,11 @@ hr.seperator {
         margin-right: 40px;
     }
 
+/*
     .section .aside {
         width: 100%;
     }
+*/
 
     .container .social {
         width: 100%;
@@ -662,10 +673,12 @@ hr.seperator {
         border-left: 0;
     }
 
+/*
     .container .aside {
         width: 100%;
         border-left: 0;
     }
+*/
 
 }
 
